@@ -1,0 +1,7 @@
+<app-header></app-header>
+<div class = "container">
+    <app-slider (time) = "changeTime($event)"></app-slider>
+    <app-tags (selectedTags) = "changeTags($event)"></app-tags>
+    <app-tabs (selectedTab) = "changeTab($event)"></app-tabs>
+</div>
+<app-list [listInfo] = "listInfo" ></app-list>

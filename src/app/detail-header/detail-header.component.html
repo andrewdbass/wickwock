@@ -1,0 +1,6 @@
+<div class = "detail-header">
+  <div class = "detail-header__back-arrow" (click)= 'back()'></div>
+  <div class = "detail-header__title"> {{category}} - {{duration}} min</div>
+  <div class = "share-icon" (click) = "share()"></div>
+</div>
+<app-share *ngIf="sharing" [url]="url" [category]="category" (done)="doneSharing($event)"></app-share>

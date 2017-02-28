@@ -1,0 +1,6 @@
+<div [ngClass]="tabsStyle">
+  <div *ngFor = "let tab of tabs"  [ngClass] = "tab.style" (click) = "selectTab(tab)">
+    {{tab.name}}
+  </div>
+</div>
+<div *ngIf= "tabsStyle.length>1" class = "tabs__spacer"></div>

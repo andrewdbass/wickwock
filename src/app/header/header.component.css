@@ -1,0 +1,24 @@
+.header{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  height: 12px;
+  display:flex;
+  background-color: white;
+  margin-bottom: 9px;
+}
+.header__hamburger-icon{
+  height: 15px;
+  width: 15px;
+
+  margin-left: 20px;
+
+  background-image: url('../../assets/hamburger_icon.png');
+  background-size: contain;
+}
+.header__logo{
+  margin-left: calc(50vw - 57px - 46.5px + 22px);
+  height: 11px;
+  width: 93px;
+  background-image: url('../../assets/plain_blue_logo.png');
+  background-size: contain;
+}

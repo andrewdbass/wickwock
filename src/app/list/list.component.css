@@ -1,0 +1,19 @@
+.list{
+  padding-left: 7px;
+  padding-right: 7px;
+}
+.list__item{
+  margin-top: 10px;
+}
+.emptyStateText{
+    margin-top: 24px;
+    color: #AEB0B7;
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.emptyStateText__title{
+  font-size: 24px;
+  margin-bottom: 4px;
+}

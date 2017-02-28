@@ -1,0 +1,77 @@
+.share__overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,.62);
+
+  z-index: 110;
+}
+.share__action-sheet{
+  background-color: white;
+  height: 208px;
+  width: 100%;
+
+  position: fixed;
+  top: calc(100vh - 208px);
+  left: 0;
+  z-index: 111;
+}
+.share__top{
+  margin-top: 20px;
+  margin-bottom: 17px;
+  padding-left: 20px;
+  padding-right: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+.share__title{
+  font-family: Montserrat-SemiBold;
+  font-size: 13px;
+  color: #343434;
+  letter-spacing: 0.5px;
+}
+.share__close{
+  background-image: url('../../assets/close_icon.png');
+  width: 12px;
+  height: 12px;
+  background-size: contain;
+}
+.share__item{
+  border-bottom: 1px solid #E5E5E5;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 20px;
+
+  display: flex;
+  align-items: center;
+}
+.share__item-bottom{
+  border-bottom: none;
+}
+.share__icon{
+  height: 24px;
+  width: 24px;
+  background-size: contain;
+}
+.share__icon-facebook{
+  background-image: url('../../assets/fb_logo.png');
+}
+.share__icon-twitter{
+  background-image: url('../../assets/twitter_logo.png');
+}
+.share__icon-copy{
+  background-image: url('../../assets/copy_icon.png');
+  height: 22px;
+  width: 20px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.share__destination{
+  margin-left : 19px;
+  font-family: Roboto-Regular;
+  font-size: 13px;
+  color: #606060;
+  letter-spacing: 0.6px;
+}

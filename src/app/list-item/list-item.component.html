@@ -1,0 +1,13 @@
+<div class = "item">
+  <div class = "item__image" [style.background-image]="'url(' +listItem.image  + ')'"></div>
+  <div *ngIf = "showPlayButton" class = "item__play-button"></div>
+  <div class = "item__tag">{{listItem.tags[0].name }}</div>
+  <div class = "item__title">{{listItem.title}}</div>
+  <div class = "item__info">
+    <div class = "source-icon"></div>
+    <div class = "source">{{listItem.source}}</div>
+    <div class = "duration-icon"></div>
+    <div class = "duration">{{listItem.duration}}m</div>
+    <div class = "share-icon" (click) = "shareItem(listItem);$event.stopPropagation()"></div>
+  </div>
+</div>

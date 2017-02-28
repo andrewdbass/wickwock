@@ -1,0 +1,29 @@
+<app-detail-header category  = "VIDEO" [duration] = "video.duration" [url]="url" ></app-detail-header>
+<div class = "video">
+  <iframe
+    id="ytplayer"
+    type="text/html"
+    class = "video__iframe"
+    [src] = "video.link | safe"
+    frameborder="0"
+    allowfullscreen="allowfullscreen"
+    mozallowfullscreen="mozallowfullscreen"
+    msallowfullscreen="msallowfullscreen"
+    allowfullscreen="oallowfullscreen"
+    webkitallowfullscreen="webkitallowfullscreen">
+  </iframe>
+  <div class = "video__text">
+    <div class = "video__tag">{{video.tag}}</div>
+    <div class = "video__title">{{video.title}}</div>
+    <div class = "video__info">
+      <div class = "source-icon"></div>
+      <div class = "source">Youtube</div>
+      <div class = "duration-icon"></div>
+      <div class = "duration">{{video.duration}}m</div>
+    </div>
+  </div>
+</div>
+<div class = "list-title">
+  Similar Videos
+</div>
+<app-list [listInfo] = "listInfo"></app-list>

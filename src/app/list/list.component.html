@@ -1,0 +1,10 @@
+<div class = "list">
+  <div *ngIf="list.length==0" class = "emptyStateText">
+    <div class = "emptyStateText__title">
+    {{emptyState.messages[emptyState.index].title}}
+    </div>
+    {{emptyState.messages[emptyState.index].message}}
+  </div>
+  <app-list-item *ngFor = "let listItem of list" [listItem] = "listItem" (click) = "navigateTo(listItem)" (share)="shareItem($event)"></app-list-item>
+</div>
+<app-share *ngIf="sharing" [url]="url" [category]="category" (done)="doneSharing($event)"></app-share>

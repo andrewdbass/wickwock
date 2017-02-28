@@ -1,0 +1,12 @@
+<div class = "tag-area">
+  <div class = "fixed-tags">
+    <div [ngClass] = "allSelected.style" (click)= "toggleAllTags()">
+      all
+    </div>
+  </div>
+  <div class = "tags">
+    <div *ngFor= "let tag of tags" [ngClass] = "tag.style" (click) = "toggleTag(tag)">
+      {{tag.name}}
+    </div>
+  </div>
+</div>

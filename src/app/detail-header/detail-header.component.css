@@ -1,0 +1,35 @@
+.detail-header{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  height: 13px;
+  align-items: center;
+  display:flex;
+  background-color: white;
+  box-shadow: 0 0 3px 0 rgba(0,0,0,0.30);
+  z-index: 110;
+  position: relative;
+}
+.detail-header__back-arrow{
+  height: 14px;
+  width: 20px;
+
+  margin-left: 20px;
+
+  background-image: url('../../assets/back_arrow.png');
+  background-size: cover;
+}
+.detail-header__title{
+  margin-left: 10px;;
+  /*font-family: Montserrat-Regular;*/
+  font-size: 13px;
+  color: #343434;
+  letter-spacing: 0.3px;
+}
+.share-icon{
+	width: 16px;
+	height: 16px;
+	background-image: url('/assets/share-icon--dark.png');
+  background-size: cover;
+  margin-left: auto;
+  margin-right: 14px;
+}
