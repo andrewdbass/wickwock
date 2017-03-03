@@ -47,7 +47,7 @@
 	width: 19px;
 	height: 19px;
 	border-radius: 100px;
-	background-position: center;
+	background-position: cover;
 	background-size: contain;
 	background-image: url("../../assets/Podcast.svg")
 }
