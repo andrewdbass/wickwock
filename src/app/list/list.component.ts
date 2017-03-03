@@ -57,7 +57,7 @@ export class ListComponent implements OnInit {
   }
   private navigateTo(listItem){
     if(listItem.source === "Medium"){
-      window.location.href = listItem.link
+      window.open(listItem.link, '_blank');
     }
     else{
       let route = "/"+this.category+"/"+listItem.id
