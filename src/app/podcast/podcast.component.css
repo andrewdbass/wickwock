@@ -98,3 +98,12 @@
   color: #343434;
   letter-spacing: 0.15px;
 }
+.list-title{
+  font-size: 12px;
+  color: #7B7B7B;
+  letter-spacing: 0.55px;
+
+  margin-top:10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}

@@ -17,4 +17,7 @@
   <div class = "podcast__time">
     <span *ngIf="usefulAudioInfo.currentTime.hours<10">0</span>{{usefulAudioInfo.currentTime.hours}}:<span *ngIf="usefulAudioInfo.currentTime.minutes<10">0</span>{{usefulAudioInfo.currentTime.minutes}}:<span *ngIf="usefulAudioInfo.currentTime.seconds<10">0</span>{{usefulAudioInfo.currentTime.seconds}} / <span *ngIf="usefulAudioInfo.totalTime.hours<10">0</span>{{usefulAudioInfo.totalTime.hours}}:<span *ngIf="usefulAudioInfo.totalTime.minutes<10">0</span>{{usefulAudioInfo.totalTime.minutes}}:<span *ngIf="usefulAudioInfo.totalTime.seconds<10">0</span>{{usefulAudioInfo.totalTime.seconds}}</div>
 </div>
+<div class = "list-title">
+  Similar Videos
+</div>
 <app-list [listInfo] = "listInfo"></app-list>
