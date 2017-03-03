@@ -55,6 +55,17 @@
   background-size: cover;
 
 }
+.podcast__button--pause{
+  height: 64px;
+  width: 64px;
+
+  margin-right: 45px;
+  margin-left: 45px;
+
+  background-image: url("../../assets/podcast-pause-button.png");
+  background-size: cover;
+
+}
 .podcast__button--forward{
   height: 33px;
   width: 37px;

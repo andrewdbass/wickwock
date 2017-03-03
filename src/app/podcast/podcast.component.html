@@ -6,7 +6,8 @@
   <div class = "podcast__source">{{podcast.source}}</div>
   <div class = "podcast__buttons">
     <div class = "podcast__button--back" (click) = "rewind(10)"></div>
-    <div class = "podcast__button--play" (click)= "play()"></div>
+    <div *ngIf = "!playing"class = "podcast__button--play" (click)= "play()"></div>
+    <div *ngIf = "playing" class = "podcast__button--pause" (click)= "pause()"></div>
     <div class = "podcast__button--forward" (click) = "fastForward(30)"></div>
   </div>
   <div class = "podcast__track">

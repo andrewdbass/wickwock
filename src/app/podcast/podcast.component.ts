@@ -24,6 +24,7 @@ export class Podcast {
   styleUrls: ['./podcast.component.css']
 })
 export class PodcastComponent implements OnInit {
+  public playing = false;
   public url = window.location
   public podcast: Podcast = {
     duration: 10,
@@ -63,9 +64,12 @@ export class PodcastComponent implements OnInit {
     this.audio.play();
     this.trackCurrentTime();
     this.setTotalTime(this.audio.duration)
+    this.playing = true;
+
   }
   public pause(){
     this.audio.pause();
+    this.playing = false;
   }
   public fastForward(sec){
     this.audio.currentTime = this.audio.currentTime + sec
