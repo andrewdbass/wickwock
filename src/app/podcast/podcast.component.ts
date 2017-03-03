@@ -34,7 +34,7 @@ export class PodcastComponent implements OnInit {
     source: "",
     title: "",
     tag: "",
-    tags: [""]
+    tags: [""],
   };
   public listInfo = new EventEmitter();
   public audio = new Audio();

@@ -1,6 +1,7 @@
 <app-detail-header category  = "PODCAST" [duration] = "podcast.duration" [url]="url"></app-detail-header>
 <div class = "podcast">
-  <div class = "podcast__image"></div>
+  <div *ngIf = "podcast.image!==''" class = "podcast__image" [style.background-image]="'url(' +podcast.image  + ')'"></div>
+  <div *ngIf = "podcast.image===''"class = "podcast__image" [style.background-image]="'url(../../assets/'+podcast.tags[0].name+'.jpg)'"></div>
   <div class = "podcast__title">{{podcast.title}}</div>
   <div class = "podcast__source">{{podcast.source}}</div>
   <div class = "podcast__buttons">

@@ -1,10 +1,12 @@
 <div class = "item">
-  <div class = "item__image" [style.background-image]="'url(' +listItem.image  + ')'"></div>
+  <div *ngIf = "listItem.image!==''" class = "item__image" [style.background-image]="'url(' +listItem.image  + ')'"></div>
+  <div *ngIf = "listItem.image===''"class = "item__image" [style.background-image]="'url(../../assets/'+listItem.tags[0].name+'.jpg)'"></div>
   <div *ngIf = "showPlayButton" class = "item__play-button"></div>
   <div class = "item__tag">{{listItem.tags[0].name }}</div>
   <div class = "item__title">{{listItem.title}}</div>
   <div class = "item__info">
-    <div class = "source-icon"></div>
+    <div *ngIf = "listItem.source === 'Youtube' || listItem.source === 'Medium'" [style.background-image]="'url(../../assets/'+listItem.source+'.png)'" class = "source-icon"></div>
+    <div *ngIf = "listItem.source !== 'Medium' && listItem.source !== 'Youtube'" class = "source-icon"></div>
     <div class = "source">{{listItem.source}}</div>
     <div class = "duration-icon"></div>
     <div class = "duration">{{listItem.duration}}m</div>
