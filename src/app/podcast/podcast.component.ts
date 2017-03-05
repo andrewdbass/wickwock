@@ -63,6 +63,7 @@ export class PodcastComponent implements OnInit {
   public play(){
     this.audio.play();
     this.trackCurrentTime();
+    console.log(this.audio.duration)
     this.setTotalTime(this.audio.duration)
     this.playing = true;
 
@@ -84,7 +85,6 @@ export class PodcastComponent implements OnInit {
       this.usefulAudioInfo.currentTime.minutes = Math.trunc(this.usefulAudioInfo.currentTime.rawTimeInSeconds%3600/60)
       this.usefulAudioInfo.currentTime.seconds = Math.trunc(this.usefulAudioInfo.currentTime.rawTimeInSeconds%60)
       this.usefulAudioInfo.percentCompleted = this.usefulAudioInfo.currentTime.rawTimeInSeconds /this.usefulAudioInfo.totalTime.rawTimeInSeconds
-      console.log(this.usefulAudioInfo.percentCompleted)
     },50);
   }
   public setTotalTime(sec){
