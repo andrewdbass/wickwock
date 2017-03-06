@@ -13,7 +13,7 @@ import 'rxjs/add/operator/toPromise';
 export class ListComponent implements OnInit {
   @HostListener('window:scroll', ['$event'])
   doSomething(event) {
-    console.debug("Scroll Event", document.body.scrollTop);
+    console.log(document.body.scrollTop)
     if(document.body.scrollTop>this.loadPosition) {
         this.loadResults(this.nextUrl);
         this.loadPosition = this.loadPosition +3000
@@ -65,20 +65,22 @@ export class ListComponent implements OnInit {
     }
   }
   private loadResults(url) {
+    // console.log(url)
     this.http.get(url)
       .map(response => response.json())
       .subscribe((res)=>{
         this.list = this.list.concat(res.results);
+        console.log(res.next)
         if(res.next !== null) this.nextUrl = res.next;
     })
   }
   ngOnInit() {
-
     this.emptyState.index = Math.floor(Math.random()*(this.emptyState.messages.length))
     this.listInfo.subscribe((lInfo)=>{
       this.list = [];
       this.loadResults(lInfo.url);
       this.category = lInfo.category
+      this.loadPosition = 2800;
     })
 
   }

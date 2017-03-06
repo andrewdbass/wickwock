@@ -17,7 +17,7 @@ export class ListItemComponent implements OnInit {
     if (this.listItem.source.indexOf("Youtube") !== -1) {
       this.showPlayButton = true;
     }
-    console.log(this.listItem)
+    // console.log(this.listItem)
   }
 
 }
